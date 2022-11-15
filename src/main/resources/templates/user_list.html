@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vuejs/vuejs-2.5.16.js"></script>
+    <script src="../vuejs/axios-0.18.0.js"></script>
+</head>
+<body>
+    <div id="userlist" align="center">
+        <table border="1" width="1000px" rules="all">
+            <tr bgcolor="yellow">
+                <th>卡号</th>
+                <th>开户人姓名</th>
+                <th>身份证号</th>
+                <th>登录密码</th>
+                <th>账户余额</th>
+                <th>操作</th>
+
+            </tr>
+            <tr v-for="u in list">
+                <td>{{u.cardid}}</td>
+                <td>{{u.cardname}}</td>
+                <td>{{u.idnumber}}</td>
+                <td>{{u.password}}</td>
+                <td>{{u.balance}}</td>
+                <td>
+                    <input type="button" @click="tode()" value="查看充值">
+                    <input type="button" @clcik="towi()" value="查看提现">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="../myjs/user_list.js"></script>
+</body>
+</html>
