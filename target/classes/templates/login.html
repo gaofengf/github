@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vuejs/vuejs-2.5.16.js"></script>
+    <script src="../vuejs/axios-0.18.0.js"></script>
+</head>
+<body>
+<div id="login">
+    <center>
+        账号:<input type="text" v-model="user.cardid"><br>
+        密码:<input type="text" v-model="user.password"><br>
+        <input type="button" @click="getLogin()" value="登录">
+    </center>
+</div>
+<script src="../myjs/login.js"></script>
+</body>
+</html>
